@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:padding="16dp"
+        tools:context=".HomeFragment">
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHomeTitle"
+            style="@style/TextAppearance.MaterialComponents.Headline2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Nutrition Detection"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivHome" />
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/ic_baseline_camera_alt_48"
+            app:layout_constraintEnd_toStartOf="@id/btnGallery"
+            app:layout_constraintStart_toStartOf="@+id/tvHomeTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeTitle" />
+
+        <ImageButton
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/ic_baseline_camera_alt_48"
+            app:layout_constraintEnd_toEndOf="@+id/tvHomeTitle"
+            app:layout_constraintStart_toEndOf="@id/btnCamera"
+            app:layout_constraintTop_toTopOf="@id/btnCamera" />
+
+        <ImageButton
+            android:id="@+id/btnScales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_rounded_secondary_button"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/ic_baseline_camera_alt_48"
+            app:layout_constraintEnd_toEndOf="@+id/btnGallery"
+            app:layout_constraintStart_toStartOf="@+id/btnCamera"
+            app:layout_constraintTop_toBottomOf="@id/btnCamera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
